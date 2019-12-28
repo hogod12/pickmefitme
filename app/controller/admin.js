@@ -2,5 +2,9 @@ import Installer from '../service/installer/Installer';
 
 exports.Main = async (req, res) => {
   res.send("admin/main");
-  var a = new Installer();
+}
+
+exports.Install = async (req, res) => {
+  var installer = new Installer();
+  installer.install();
 }

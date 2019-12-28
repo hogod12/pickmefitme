@@ -21,13 +21,12 @@ class Installer {
   constructor () {
     // DATABASE -> TABLE -> COLUMN / TABLE -> PROPERTIES
     // util에 parser.js를 활용하여 개발진행
-    var db_query_executor = new DBQueryExecutor();
-    db_query_executor.generateConstructDBQuery(database);
+    this.db_query_executor = new DBQueryExecutor();
   }
   // 첫 인스톨을 수행한다.
   // 지정된 database에 테이블이 존재할 경우, Modify 혹은 ReInstall로 이동한다.
   install () {
-
+    this.db_query_executor.generateConstructDBQuery(database);
   }
   // 파괴적 재설치
   // 기존의 레거시 정보를 모두 삭제하고 데이터베이스를 새로 설치한다.
