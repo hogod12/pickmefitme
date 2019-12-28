@@ -3,6 +3,6 @@
   "user" : "root",
   "password" : "359214hsj*ABC",
   "port" : 3306,
-  "database" : "test_shop",
+  "database" : "pickmefitme_test",
   "connectionLimit" : 200
 }

@@ -1,5 +1,5 @@
 {
-  "ORDER" : {
+  "ORDER_TB" : {
     "columns" : [
       "IDX INT UNSIGNED NOT NULL AUTO_INCREMENT",
       "BODY JSON NOT NULL",
@@ -9,11 +9,11 @@
       "PRIMARY KEY(IDX)"
     ]
   },
-  "TEST" : {
+  "TEST_TB" : {
     "columns" : [
       "IDX INT UNSIGNED NOT NULL AUTO_INCREMENT",
-      "A JSON NOT NULL",
-      "B JSON NOT NULL"
+      "AAA JSON NOT NULL",
+      "BBB JSON NOT NULL"
     ],
     "properties" : [
       "PRIMARY KEY(IDX)"

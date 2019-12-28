@@ -5,9 +5,7 @@ exports.Main = (req, res) => {
 }
 
 exports.CreateBody = async (req, res) => {
-  console.log(req.body.size1);
-  console.log(req.body.size2);
-  console.log(req.body.size3);
+  console.log(req.body);
   var pretender = new Pretender(12,23);
   pretender.AI();
 }
