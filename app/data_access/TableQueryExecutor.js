@@ -3,9 +3,8 @@
 // * "단순" WHERE, AND 까지는 생성할 수 있도록 구성
 // ! OR과 그 외의 복잡한 쿼리는 생성하지 못함
 class TableQueryExecutor {
-  constructor (action, table, columns, values, condition) {
+  constructor (table, columns, values, condition="TRUE") {
     this._date = new Date();
-    this._action = action;
     this._table = table;
     // DISCUSSION 1 :
     // columns, values 를 분리해야 하는가? JSON으로 같이보내야 하는가?
@@ -28,16 +27,17 @@ class TableQueryExecutor {
 
   // TODO :
   // 이하 4개의 Exec 계열 쿼리의 로그는 실행이 보장된 쿼리로 한다.
-  ExecInsertQuery () {
-    //
+  execInsertQuery () {
+    query = `INSERT INTO ${mysql.escape(this._table)} (${mysql.escape(this._columns)}) VALUES (${mysql.escape(this._values)})`;
   }
-  ExecSelectQuery () {
+  execSelectQuery () {
     // SELECT 결과를 반환
+    query = `SELECT ${mysql.escape(this.columns)} FROM ${mysql.escape(this._table)} WHERE ${mysql.escape(this._condition)}`;
   }
-  ExecUpdateQuery () {
+  execUpdateQuery () {
 
   }
-  ExecDeleteQuery () {
+  execDeleteQuery () {
 
   }
 }
