@@ -1,0 +1,22 @@
+{
+  "ORDER" : {
+    "columns" : [
+      "IDX INT UNSIGNED NOT NULL AUTO_INCREMENT",
+      "BODY JSON NOT NULL",
+      "CLOTH JSON NOT NULL"
+    ],
+    "properties" : [
+      "PRIMARY KEY(IDX)"
+    ]
+  },
+  "TEST" : {
+    "columns" : [
+      "IDX INT UNSIGNED NOT NULL AUTO_INCREMENT",
+      "A JSON NOT NULL",
+      "B JSON NOT NULL"
+    ],
+    "properties" : [
+      "PRIMARY KEY(IDX)"
+    ]
+  }
+}

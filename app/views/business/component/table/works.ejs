@@ -1,0 +1,37 @@
+<!--
+DISCUSSION 1
+일단 works라고 대출 놓기는 했는데... body, cloth를 포괄하는
+상위 개념의 이름을 뭐라고 지어야 할까?
+정해지면 해당 파일의 제목도 바꿀 것
+-->
+
+<div class="class mb-3">
+  <div class="card-header">
+    <i class="fas fa-table"></i>
+    목록
+  </div>
+  <div class="card-body">
+    <!-- DataTales Example -->
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>연번</th>
+            <th>신체치수</th>
+            <th>패턴치수</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <% for (var i=0 ; i<10 ; i++) { %>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
